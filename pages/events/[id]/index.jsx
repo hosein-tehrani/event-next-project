@@ -2,12 +2,17 @@ import { getAllEvents, getEventById } from "../../../dummy-data";
 import EventSummary from "../../../components/event-detail/event-summary";
 import EventLogistics from "../../../components/event-detail/event-logistics";
 import EventContent from "../../../components/event-detail/event-content";
+import Head from "next/head";
 
 export default function DetailsPage({ data }) {
   const { title, location, description, date, image } = data;
 
   return (
     <>
+      <Head>
+        <title>Event | {title}</title>
+        <meta name="description" content={description} />
+      </Head>
       <EventSummary title={title} />
       <EventLogistics
         date={date}
