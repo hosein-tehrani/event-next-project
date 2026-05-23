@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import EventSearch from "../../components/events/EventSearch";
 import EventsList from "../../components/events/eventsList";
-import { getAllEvents, getYears } from "../../dummy-data";
+import { getAllEvents } from "../../dummy-data";
 
 export default function EventsPage() {
   const events = getAllEvents();
@@ -16,3 +16,4 @@ export default function EventsPage() {
     </div>
   );
 }
+
