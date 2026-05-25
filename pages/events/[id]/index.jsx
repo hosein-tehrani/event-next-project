@@ -3,9 +3,10 @@ import EventSummary from "../../../components/event-detail/event-summary";
 import EventLogistics from "../../../components/event-detail/event-logistics";
 import EventContent from "../../../components/event-detail/event-content";
 import Head from "next/head";
+import Comments from "../../../components/input/comments";
 
 export default function DetailsPage({ data }) {
-  const { title, location, description, date, image } = data;
+  const { title, location, description, date, image,id } = data;
 
   return (
     <>
@@ -23,6 +24,8 @@ export default function DetailsPage({ data }) {
       <EventContent>
         <p>{description}</p>
       </EventContent>
+
+      <Comments eventId={id}/>
     </>
   );
 }
