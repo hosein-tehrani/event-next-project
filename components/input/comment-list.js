@@ -6,7 +6,6 @@ function CommentList({ comments }) {
   } else {
     return (
       <ul className={classes.comments}>
-        {/* Render list of comments - fetched from API */}
         {comments.length !== 0 &&
           comments.map((comment) => (
             <li key={comment._id}>
